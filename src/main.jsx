@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import ErrorPage from './conponents/ErrorPage/ErrorPage';
 import './index.css'
 // import App from './App.jsx'
 
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/about',
