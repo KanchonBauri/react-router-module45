@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+    const nevigate = useNavigate();
+    const handleGoBack = () => {
+        nevigate(-1);
+    }
     return (
         <div>
             {/* <h2>Navbar</h2> */}
@@ -49,6 +53,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    <button className="btn" onClick={handleGoBack} >Go Back</button>
                     <a className="btn">Button</a>
                 </div>
             </div>
